@@ -7,7 +7,7 @@ jobs:
   deploy-tags:
     if: endsWith(github.event.base_ref, 'main')
     steps:
-     - name: GitHub Tag Name example 3
+     - name: GitHub Tag Name example update
        run: |
          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
          echo "Tag name from github.ref_name: ${{  github.ref_name }}"
