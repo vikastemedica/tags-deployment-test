@@ -4,10 +4,10 @@ on:
   push:
     tags:
       - 'v*'
-      
+
 jobs:
   deploy-tags:
-    if: endsWith(github.event.base_ref, 'main')
+    # if: endsWith(github.event.base_ref, 'main')
     steps:
      - name: GitHub Tag Name example dep
        run: |
