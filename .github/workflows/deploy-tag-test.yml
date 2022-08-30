@@ -2,8 +2,7 @@ name: Deploy tag to PR Env
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches: [main]
 jobs:
   deploy-tags:
     if: endsWith(github.event.base_ref, 'main')
