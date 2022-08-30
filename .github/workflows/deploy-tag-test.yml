@@ -6,7 +6,7 @@ on:
       - 'v*'
 jobs:
   deploy-tags:
-    if: contains(github.event.base_ref, 'main')
+    if: endsWith(github.event.base_ref, 'master')
     steps:
      - name: GitHub Tag Name example 3
        run: |
