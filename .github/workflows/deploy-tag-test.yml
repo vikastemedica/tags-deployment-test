@@ -6,11 +6,12 @@ on:
       - 'v*'
 jobs:
   deploy-tags:
+    if: contains(github.event.base_ref, 'main')
     steps:
      - name: GitHub Tag Name example 3
        run: |
          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
          echo "Tag name from github.ref_name: ${{  github.ref_name }}"
-         echo "Tag name from github.ref_name: ${{ toJson(github) }}"
+         echo "Tag name from github: ${{ toJson(github) }}"
          
     runs-on: ubuntu-latest
