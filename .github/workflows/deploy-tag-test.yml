@@ -3,7 +3,7 @@ name: Deploy tag to PR Env
 on:
   push:
     tags:
-      - '*'
+      - 'v*'
 jobs:
   deploy-tags:
     steps:
