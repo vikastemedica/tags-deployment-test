@@ -2,12 +2,14 @@ name: Deploy tag to PR Env
 
 on:
   push:
-    branches: [main]
+    tags:
+      - 'v*'
+
 jobs:
   deploy-tags:
-    if: endsWith(github.event.base_ref, 'main')
+    # if: endsWith(github.event.base_ref, 'main')
     steps:
-     - name: GitHub Tag Name example update
+     - name: GitHub Tag Name example dep
        run: |
          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
          echo "Tag name from github.ref_name: ${{  github.ref_name }}"
